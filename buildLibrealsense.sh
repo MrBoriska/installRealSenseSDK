@@ -6,7 +6,7 @@
 # Jetson Nano; L4T 32.2.3
 
 LIBREALSENSE_DIRECTORY=${HOME}/librealsense
-LIBREALSENSE_VERSION=v2.31.0
+LIBREALSENSE_VERSION=2e932fc4f2f2fe8e2b1899a508a2e94bd301a682 # v2.35.2 with build fixed
 INSTALL_DIR=$PWD
 NVCC_PATH=/usr/local/cuda-10.0/bin/nvcc
 
@@ -56,19 +56,6 @@ fi
 
 # Is the version of librealsense current enough?
 cd $LIBREALSENSE_DIRECTORY
-VERSION_TAG=$(git tag -l $LIBREALSENSE_VERSION)
-if [ ! $VERSION_TAG  ] ; then
-   echo ""
-  tput setaf 1
-  echo "==== librealsense Version Mismatch! ============="
-  tput sgr0
-  echo ""
-  echo "The installed version of librealsense is not current enough for these scripts."
-  echo "This script needs librealsense tag version: "$LIBREALSENSE_VERSION "but it is not available."
-  echo "Please upgrade librealsense or remove the librealsense folder before attempting to install again."
-  echo ""
-  exit 1
-fi
 
 # Checkout version the last tested version of librealsense
 git checkout $LIBREALSENSE_VERSION
