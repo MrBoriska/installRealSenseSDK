@@ -31,6 +31,14 @@ This script will build librealsense from source and install it on the system. It
 
 <h2>Notes</h2>
 
+<h4>July, 2020</h4>
+
+* Release vL4T32.3.1
+* Jetson Nano, Jetson TX1, Jetson TX2, Jetson AGX Xavier
+* L4T 32.3.1, JetPack 4.3, Kernel 4.9
+* librealsense version v2.35.2
+* OpenCV 4.1.1 with CUDA
+
 <h4>January, 2020</h4>
 
 * Release vL4T32.3.1
